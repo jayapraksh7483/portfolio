@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divvi Jayaprakash - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #e0e0e0; /* Fallback color */
+            min-height: 100vh;
+        }
+        .bg-overlay {
+            background-color: rgba(0, 0, 0, 0.1); /* Light overlay for readability */
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="bg-overlay">
+        <!-- Navbar -->
+        <nav class="bg-blue-600 text-white p-4 sticky top-0 z-10 shadow-md">
+            <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+                <h1 class="text-xl font-bold mb-2 sm:mb-0">Divvi Jayaprakash</h1>
+                <div class="flex flex-wrap gap-2 sm:gap-4 text-sm sm:text-base">
+                    <a href="#about" class="hover:underline">About</a>
+                    <a href="#education" class="hover:underline">Education</a>
+                    <a href="#projects" class="hover:underline">Projects</a>
+                    <a href="#skills" class="hover:underline">Skills</a>
+                    <a href="#certifications" class="hover:underline">Certifications</a>
+                    <a href="#achievements" class="hover:underline">Achievements</a>
+                    <a href="#responsibilities" class="hover:underline">Responsibilities</a>
+                    <a href="#extracurricular" class="hover:underline">Extracurricular</a>
+                    <a href="#contact" class="hover:underline">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="py-10">
+            <div class="container mx-auto px-4">
+               
+                <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="img.png" alt="Divvi Jayaprakash Profile Photo" class="rounded-full shadow-lg w-48 h-48 sm:w-64 sm:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="w-full md:w-2/3 text-center md:text-left bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <p class="text-lg text-gray-700">
+                            I am Divvi Jayaprakash, a B.Tech. Mechanical Engineering student at NIT Andhra Pradesh (2021-2025). Passionate about full-stack web development, I specialize in the MERN stack, building secure, scalable, and user-friendly applications. My projects showcase technical expertise, while my academic and extracurricular activities reflect leadership and teamwork.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+ <section id="education" class="py-10">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Education</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="background-image: url('https://images.pexels.com/photos/1912172/pexels-photo-1912172.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
+                <h3 class="text-xl font-semibold text-sky-900">B.Tech. Mechanical Engineering</h3>
+                <p class="  font-bold text-sky-900">National Institute of Technology Andhra Pradesh</p>
+                <p class=" font-bold  text-sky-900">2021 – 2025 | CGPA: 6.55 (7th Sem)</p>
+            </div>
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="background-image: url('data:image/jpeg;base64,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'); background-size: cover; background-position: center;">
+                <h3 class="text-xl font-bold text-gray-800">Senior Secondary</h3>
+                <p class="  font-bold text-gray-900">Board of Intermediate Education, AP</p>
+                <p class="  font-bold text-gray-900">2021 | 94.7%</p>
+            </div>
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="background-image: url('https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=2070'); background-size: cover; background-position: center;">
+                <h3 class="text-xl font-semibold text-gray-800">Secondary</h3>
+                <p class=" font-bold text-gray-900">Board of Secondary Education,AP</p>
+                <p class="font-bold text-gray-900 ">2019 | 9.3 GPA</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Projects Section -->
+     <section id="projects" class="py-10">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Projects</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEz0hP3g3iLwP__703RPk8cBxOiP77DHOI6w&s'); background-size:cover; background-position: center;">'
+                <h3 class="text-xl font-semibold text-gray-800">FoodZone</h3>
+                <p class="font-bold text-gray-900">May 2024 | Full Stack Web Application</p>
+                <p class="font-bold text-gray-900">E-commerce platform with secure user authentication, add-to-cart functionality, Stripe payment integration, and an admin panel for product management and order tracking.</p>
+                <p class="font-bold text-gray-900">Tech: React, Node.js, Express, MongoDB, Stripe API, JWT, Render</p>
+                <p><a href="https://your-frontend-link.com" class=" text-blue-900 hover:underline">Frontend</a> | <a href="https://your-adminpanel-link.com" class="text-blue-900 hover:underline">Admin Panel</a></p>
+            </div>
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="background-image: url('data:image/png;base64,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'); background-size: cover; background-position: center;">
+                <h3 class="text-xl font-bold text-gray-900">Chat Web Application</h3>
+                <p class="font-bold text-gray-900">May 2025 | Full Stack Web Application</p>
+                <p class="font-bold text-gray-900">Real-time chat app with WebSocket-based communication, supporting multiple users, chat rooms, typing indicators, and message notifications.</p>
+                <p class="font-bold text-gray-900">Tech: React, Node.js, Express, Socket.io, MongoDB, JWT, Render</p>
+                <p><a href="https://chatwebapplication.com" class=" text-red-900 hover:underline">View Project</a></p>
+            </div>
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEyJ9BdsPMY-o268tCatX1QF8OtUtYmFv2rA&s '); background-size: cover; background-position: center;">
+                <h3 class="text-xl font-semibold text-red-900">T-Shirt Store</h3>
+                <p class="font-bold text-gray-900">Responsive e-commerce site with dynamic product listings, category-based filtering, real-time search, and an interactive shopping cart (UI).</p>
+                <p class="font-bold text-gray-900">Tech: React.js, Bootstrap, JavaScript, HTML, CSS</p>
+                <p><a href="https://tshirt-store.netlify.app" class="  text-blue-900 hover:underline">View Project</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Skills</h2>
+                <div class="flex flex-wrap gap-2 sm:gap-4 justify-center">
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">C++</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">JavaScript</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">React.js</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Express.js</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Node.js</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">SQL</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">HTML</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Tailwind CSS</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Bootstrap</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">MERN Stack</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">DSA</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">OOP</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">DBMS</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Frontend</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Backend</span>
+                    <span class="bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300">Full Stack Web Development</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Certifications</h2>
+                <ul class="list-disc list-inside text-gray-700 max-w-3xl mx-auto">
+                    <li class="bg-white bg-opacity-80 p-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">C++ (Udemy): OOP Concepts, STL (Vectors, Maps, Sets), Pointers, Memory Management, File Handling</li>
+                    <li class="bg-white bg-opacity-80 p-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Full Stack Development (Apna College): MongoDB, Express.js, React.js, Node.js, REST APIs, JWT Authentication, Deployment</li>
+                    <li class="bg-white bg-opacity-80 p-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Mathematical Modeling of Manufacturing Processes (NPTEL): Welding Analysis, Metal Forming Models, Machining Theory, Thermal Stress Analysis</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Achievements</h2>
+                <ul class="list-disc list-inside text-gray-700 max-w-3xl mx-auto">
+                    <li class="bg-white bg-opacity-80 p-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Ranked 44,891 out of 11+ lakh in JEE Mains (2021)</li>
+                    <li class="bg-white bg-opacity-80 p-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Scored 947/1000 in Senior Secondary (2021)</li>
+                    <li class="bg-white bg-opacity-80 p-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Achieved 9.3/10 GPA in Secondary (2019)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Responsibilities Section -->
+        <section id="responsibilities" class="py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Positions of Responsibility</h2>
+                <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-gray-700">
+                        <strong>Coordinator/Volunteer/Member</strong>, Security and Management Club, NIT Andhra Pradesh (Aug 2021 – Jul 2025)<br>
+                        Organized Vulcanzy College Festival, showcasing leadership and teamwork.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extracurricular Section -->
+        <section id="extracurricular" class="py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4 text-center text-gray-800">Extracurricular</h2>
+                <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-gray-700">
+                        Actively participated in <strong>Kabaddi</strong>, <strong>Cricket</strong>, and <strong>Volleyball</strong>, fostering teamwork and discipline.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-10 bg-blue-600 text-white bg-opacity-90">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4 text-center">Contact</h2>
+                <div class="text-center space-y-2">
+                    <p>Phone: <a href="tel:+919704239539" class="underline">+91-9704239539</a></p>
+                    <p>Email: <a href="mailto:divvijayaprakash@gmail.com" class="underline">divvijayaprakash@gmail.com</a></p>
+                    <p>GitHub: <a href="https://github.com/your-profile" class="underline">GitHub Profile</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" class="underline">LinkedIn Profile</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+```

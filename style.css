@@ -1,0 +1,10 @@
+/* Additional custom styles (Tailwind handles most styling) */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Hover effect for project cards */
+.bg-gray-50:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
