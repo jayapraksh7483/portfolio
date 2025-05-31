@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divvi Jayaprakash - Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.22.5/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen text-gray-200">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const NavBar = () => (
+      <nav className="fixed top-0 left-0 w-full bg-opacity-80 bg-gray-900 p-4 flex justify-between items-center z-20">
+        <div className="text-2xl font-bold text-white">Divvi Jayaprakash</div>
+        <div className="space-x-4">
+          {['About', 'Education', 'Projects', 'Skills', 'Certifications', 'Contact'].map((section) => (
+            <a key={section} href={`#${section.toLowerCase()}`} className="text-gray-300 hover:text-white transition">
+              {section}
+            </a>
+          ))}
+        </div>
+      </nav>
+    );
+
+    const Sidebar = () => (
+      <aside className="hidden lg:block fixed left-0 top-20 h-full w-48 bg-gray-800 bg-opacity-90 p-4 z-20">
+        <ul className="space-y-4">
+          {['About', 'Education', 'Projects', 'Skills', 'Certifications', 'Contact'].map((section) => (
+            <li key={section}>
+              <a href={`#${section.toLowerCase()}`} className="text-gray-300 hover:text-white transition">
+                {section}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    );
+
+    const Section = ({ id, title, children, bgColor, hoverColor }) => (
+      <section
+        id={id}
+        className={`py-12 px-4 lg:ml-52 transition-colors duration-300 ${bgColor} hover:${hoverColor} hover:bg-opacity-100 rounded-lg shadow-lg z-10 relative bg-opacity-80 backdrop-blur-sm m-4`}
+      >
+        <h2 className="text-3xl font-bold mb-6 text-white">{title}</h2>
+        <div>{children}</div>
+      </section>
+    );
+
+    const App = () => (
+      <div className="relative">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ backgroundImage: "url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg')" }}
+        ></div>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+        <NavBar />
+        <Sidebar />
+
+        {/* Hero Section with Photo */}
+        <header className="relative h-screen flex flex-col items-center justify-center text-center lg:ml-52 z-10">
+          <img
+            src="img.png"
+            alt="Divvi Jayaprakash"
+            className="w-48 h-48 rounded-full mb-6 border-4 border-white shadow-lg"
+          />
+          <h1 className="text-5xl font-bold text-white mb-4">Divvi Jayaprakash</h1>
+          <p className="text-xl text-gray-300">B.Tech. Mechanical Engineering | Full Stack Developer</p>
+          <div className="mt-6 space-x-4">
+            <a href="https://github.com" target="_blank" className="text-gray-300 hover:text-white">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" className="text-gray-300 hover:text-white">LinkedIn</a>
+          </div>
+        </header>
+
+        <Section id="about" title="About" bgColor="bg-blue-600" hoverColor="bg-blue-900">
+          <p className="text-lg">
+            I am a B.Tech. Mechanical Engineering student at NIT Andhra Pradesh, passionate about full-stack web development. I specialize in the MERN stack and have experience building scalable web applications with technologies like React, Node.js, and MongoDB.
+          </p>
+        </Section>
+
+        <Section id="education" title="Education" bgColor="bg-green-600" hoverColor="bg-green-900">
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold">B.Tech. Mechanical Engineering</h3>
+              <p>National Institute of Technology, Andhra Pradesh | CGPA: 6.55 (7th Sem) | 2021-2025</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Senior Secondary</h3>
+              <p>Board of Intermediate Education, Andhra Pradesh | 94.7% | 2021</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Secondary</h3>
+              <p>Board of Secondary Education, Andhra Pradesh | 9.3 GPA | 2019</p>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="projects" title="Projects" bgColor="bg-purple-600" hoverColor="bg-purple-900">
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold">FoodZone (May 2024)</h3>
+              <p>Full Stack Web Application</p>
+              <ul className="list-disc pl-5">
+                <li>Implemented secure user authentication for customers and admins.</li>
+                <li>Developed add-to-cart functionality with real-time updates.</li>
+                <li>Built seamless order placement workflow with Stripe payment gateway.</li>
+                <li>Technologies: React, Node.js, Express, MongoDB, Stripe API, JWT, Render.</li>
+                <li><a href="https://foodzone-frontendd.onrender.com" target="_blank" className="text-blue-300 hover:underline">Frontend</a> | <a href="https://foodzone-admin-fs3r.onrender.com" target="_blank" className="text-blue-300 hover:underline">Admin Panel</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Chat Web Application (May 2025)</h3>
+              <p>Full Stack Web Application</p>
+              <ul className="list-disc pl-5">
+                <li>Designed real-time chat app with multiple users and chat rooms.</li>
+                <li>Implemented WebSocket-based communication using Socket.io.</li>
+                <li>Technologies: React, Node.js, Express, Socket.io, MongoDB, JWT, Render.</li>
+                <li><a href="https://chatwebapplication-6.onrender.com" target="_blank" className="text-blue-300 hover:underline">Frontend</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">T-Shirt Store (Dec 2024)</h3>
+              <p>Frontend E-Commerce Project</p>
+              <ul className="list-disc pl-5">
+                <li>Built a responsive e-commerce site with dynamic product listings.</li>
+                <li>Implemented category-based filtering and real-time search.</li>
+                <li>Technologies: React.js, Bootstrap, JavaScript, HTML, CSS.</li>
+                <li><a href="https://665867e1003792f98d0f3477--warm-cranachan-00805a.netlify.app" target="_blank" className="text-blue-300 hover:underline">Website</a></li>
+              </ul>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="skills" title="Skills" bgColor="bg-teal-600" hoverColor="bg-teal-900">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-xl font-semibold">Programming</h3>
+              <p>C++, JavaScript, React.js, Express.js, Node.js, SQL, HTML, Tailwind, Bootstrap</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Familiar Skills</h3>
+              <p>DSA, Frontend, Backend, MERN, Full Stack Web Development, DBMS, OOPS</p>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="certifications" title="Certifications" bgColor="bg-indigo-600" hoverColor="bg-indigo-900">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>C++ (Udemy): OOP Concepts, STL, Pointers, Memory Management, File Handling</li>
+            <li>Full Stack Development (Apna College): MongoDB, Express.js, React.js, Node.js, REST APIs, JWT, Deployment</li>
+            <li>Mathematical Modeling of Manufacturing Processes (NPTEL): Welding Analysis, Metal Forming, Machining Theory</li>
+          </ul>
+        </Section>
+
+        <Section id="contact" title="Contact" bgColor="bg-pink-600" hoverColor="bg-pink-900">
+          <p className="text-lg">
+            Email: <a href="mailto:divvijayaprakash@gmail.com" className="text-blue-300 hover:underline">divvijayaprakash@gmail.com</a><br />
+            Phone: +91-9704239539<br />
+            <a href="https://github.com" target="_blank" className="text-blue-300 hover:underline">GitHub</a> | <a href="https://linkedin.com" target="_blank" className="text-blue-300 hover:underline">LinkedIn</a>
+          </p>
+        </Section>
+
+        <footer className="bg-gray-900 bg-opacity-80 text-center py-4 lg:ml-52 z-10 relative">
+          <p>© 2025 Divvi Jayaprakash. All rights reserved.</p>
+        </footer>
+      </div>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
